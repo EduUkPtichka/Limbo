@@ -18,4 +18,5 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+/* Постановка целей: */
+include(":setting-goals:no-args-constructor-goals")
