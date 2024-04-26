@@ -1,3 +1,9 @@
+@file:Suppress("OPT_IN_USAGE")
+
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+
+
 plugins {
     alias(libs.plugins.jetbrains.kotlin.multiplatform.plugins)
 }
@@ -9,7 +15,10 @@ kotlin {
      * - Что-то специфическое из Android.
      * - какой-то jvm инструмент который не поддерживается jvm android-а.
      */
-    jvm()
+    jvm() {
+        withJava()
+        // compileTaskProvider.configure
+    }
 
     listOf(
         iosX64(),
